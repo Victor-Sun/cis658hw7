@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.4.1'
 group :production do
 	gem 'pg'
+  gem 'rails_12factor'
 end
 
 git_source(:github) do |repo_name|
