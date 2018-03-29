@@ -1,10 +1,6 @@
 source 'https://rubygems.org'
 
 ruby '2.4.1'
-group :production do
-	gem 'pg', '~> 0.20'
-  gem 'rails_12factor'
-end
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -59,5 +55,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'pg', '~> 0.20'
+  gem 'rails_12factor'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
