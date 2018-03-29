@@ -1,0 +1,21 @@
+<div class="jumbotron">
+    <div class="container">
+      <h1>Welcome!</h1>
+      <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
+    </div>
+</div>
+
+<div class ="container">
+    <!-- Row of bugs -->
+    <div class = "row">
+        <% @bugs.each do |bug| %>
+        <div class ="col-md-4">
+            <h2><%= bug.title%></h2>
+            <p><%=bug.description.truncate_words(30)%></p>
+            <p>
+                <%= link_to 'Read more', bug, class: "btn btn-default"%>
+            </p>
+        </div>
+        <% end %>
+    </div>
+</div>
